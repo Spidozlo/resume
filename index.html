@@ -28,10 +28,9 @@
       background: url('my_photo.jpg') no-repeat center center;
       background-size: cover;
       position: relative;
-      height: auto; /* 🔥 поменяно */
-      min-height: 100vh; /* оставляем, чтобы не схлопывалось */
+      height: auto;
+      min-height: 100vh;
     }
-
 
     .photo-name {
       position: absolute;
@@ -129,6 +128,17 @@
 
     .social-icons a:hover {
       color: #c3073f;
+    }
+
+    .section a {
+      color: #f5f5f5;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .section a:hover {
+      color: #c3073f;
+      text-decoration: underline;
     }
 
     ul {
