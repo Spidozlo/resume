@@ -244,5 +244,38 @@
       <a href="https://t.me/Evgengagv" target="_blank"><i class="fab fa-telegram-plane"></i></a>
     </div>
   </div>
+  <script>
+  document.addEventListener('mousemove', function(e) {
+    const dot = document.createElement('div');
+    dot.className = 'cursor-trail';
+    dot.style.left = `${e.pageX}px`;
+    dot.style.top = `${e.pageY}px`;
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 1000); // удаление через 1 сек
+  });
+</script>
+
+<style>
+  .cursor-trail {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    animation: fadeOut 1s ease-out forwards;
+    z-index: 9999;
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+</style>
+
 </body>
 </html>
